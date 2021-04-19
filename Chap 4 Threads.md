@@ -248,7 +248,7 @@ Parallel 하면 Concurrent O**
 
 ### fork() & exec()
 
-- one thread가 fort() 호출 시
+- one thread가 fork() 호출 시
   - 모든 threads를 복제
   - fork() 호출한 thread만 복제
 - fork() 후 exec()가 바로 호출되면, 왜 모든 threads를 복제하는가
