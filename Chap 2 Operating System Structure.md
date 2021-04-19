@@ -183,7 +183,7 @@ int f1() {
 ### Message Passing(Synchronous)
 
 - Connection이 가장 먼저 open되어야 함 → 서로 준비되어야 함
-- Connection 생성에도 system call이 필요이 필요
+- Connection 생성에도 system call이 필요
 
 ### Shared-Memory model(Asynchronous)
 
