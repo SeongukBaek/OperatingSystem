@@ -4,7 +4,7 @@
 
 - OS는 프로그램의 수행을 위한 환경 제공, 프로그램과 프로그램의 User에게 특정 Service를 제공 ⇒ interface를 통해
 
-![Chap%202%20Operating%20System%20Structure%2017c2e0e9b21044b08a0d556023b70afe/Untitled.png](Chap%202%20Operating%20System%20Structure%2017c2e0e9b21044b08a0d556023b70afe/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/33208303/115228712-12821200-a14d-11eb-95da-5aac09d482a7.png)
 
 - OS에서 제공하는 Services 다양하고, App이 OS의 Service를 이용하기 위해서는 System call을 거쳐야만 가능
 
@@ -28,21 +28,21 @@
 
 - 프로그램이 직접적으로 접근하는 것 X, OS를 거쳐서 이때 System call이 필요
 
-### Communications (= Networking) → 프로그램 간 또는 Computer  간
+### Communications (= Networking) → 프로그램 간 또는 Computer 간
 
 - MSG를 전달하는 방식
-    - 직접 전달하는 방식인 msg passing → Connection이 필요
-    - 공유된 memory를 이용하여 전달하는 방식인 shared memory → Connection이 필요 X, sharing을 위해서 System call이 반드시 필요, msg 전달에 있어 delay 발생
+  - 직접 전달하는 방식인 msg passing → Connection이 필요
+  - 공유된 memory를 이용하여 전달하는 방식인 shared memory → Connection이 필요 X, sharing을 위해서 System call이 반드시 필요, msg 전달에 있어 delay 발생
 
 ### Error Detection
 
 - HW-Level의 error와 SW-Level의 error 존재
-    - memory error, Power failure, parity, connection failure, ...
-    - bit flip
-        - Bit 반전, 프로그램 수행 중, 데이터의 bit가 원치않게 flip될 수 있음
-    - 감지가 어려운 error: silent error
-        - memory leak: 어떤 프로그램이 memory를 계속 조금씩 조금씩 차지 ⇒ 나중에는 메모리가 남지 않게 됨.
-            - 이때, 종료한 후 다시 실행하면 해결되지만 종료할 수 없는 서버의 경우는 문제
+  - memory error, Power failure, parity, connection failure, ...
+  - bit flip
+    - Bit 반전, 프로그램 수행 중, 데이터의 bit가 원치않게 flip될 수 있음
+  - 감지가 어려운 error: silent error
+    - memory leak: 어떤 프로그램이 memory를 계속 조금씩 조금씩 차지 ⇒ 나중에는 메모리가 남지 않게 됨.
+      - 이때, 종료한 후 다시 실행하면 해결되지만 종료할 수 없는 서버의 경우는 문제
 
 # OS Services for Efficient Operation → User에게 보여지지 않음
 
@@ -51,7 +51,7 @@
 ### Resource Accounting
 
 - 어떤 프로세스가 resource를 얼마나 사용하는지 추적
-    - 너무 많이 사용하는 프로세스에서 resource를 분배, 관리
+  - 너무 많이 사용하는 프로세스에서 resource를 분배, 관리
 
 ### Protection and Security
 
@@ -68,7 +68,7 @@
 
 ### file copy의 예 ⇒ 많은 system call이 필요
 
-![Chap%202%20Operating%20System%20Structure%2017c2e0e9b21044b08a0d556023b70afe/Untitled%201.png](Chap%202%20Operating%20System%20Structure%2017c2e0e9b21044b08a0d556023b70afe/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/33208303/115228698-0eee8b00-a14d-11eb-9cd3-6b8f4d3abaf4.png)
 
 1. copy를 위해서 OS는 목적 파일 이름과 원본 파일 이름을 요구
 2. 파일이 없거나, 파일에 대한 권한이 없는 경우, error 발생하고 그렇지 않으면 copy할 준비
@@ -84,23 +84,23 @@
 - Windows API, POSIX API, Java API
 - Java API는 다른 API와는 다르게 상위 계층에 존재
 
-    JAVA API → libc → system call 관계
+  JAVA API → libc → system call 관계
 
-![Chap%202%20Operating%20System%20Structure%2017c2e0e9b21044b08a0d556023b70afe/Untitled%202.png](Chap%202%20Operating%20System%20Structure%2017c2e0e9b21044b08a0d556023b70afe/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/33208303/115228700-101fb800-a14d-11eb-9fe2-37fe1eaf85b4.png)
 
 - 하나의 libc function이 하나 이상의 system call을 호출할 수도 있고,
 - 하나의 system call이 하나 이상의 libc function으로부터 호출될 수도 있다.
 - 모든 libc functions이 system call을 호출하는 것은 아님
 - Why use APIs rather than System Calls directly?
-    - 인자나 buffering 문제 해결이 어렵기 때문에 직접적으로 호출하지 않음
-    - Portablity문제(code를 다른 환경(system call setup이 다른 = different mapping)에서 compile가능 = portable)
-    - libc가 system call을 사용하기 위해 필요한 인자를 채워주는 역할
+  - 인자나 buffering 문제 해결이 어렵기 때문에 직접적으로 호출하지 않음
+  - Portablity문제(code를 다른 환경(system call setup이 다른 = different mapping)에서 compile가능 = portable)
+  - libc가 system call을 사용하기 위해 필요한 인자를 채워주는 역할
 
 # System Call Interface
 
 ### Set of library functions that links to the system calls
 
-![Chap%202%20Operating%20System%20Structure%2017c2e0e9b21044b08a0d556023b70afe/Untitled%203.png](Chap%202%20Operating%20System%20Structure%2017c2e0e9b21044b08a0d556023b70afe/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/33208303/115228702-10b84e80-a14d-11eb-91a4-c4a83d4ec363.png)
 
 - user application에서 libc 호출 → system call interface를 통해 kernel mode로 접근 → OS에 정의된 system call을 실행하고 return되는 int값을 가지고 다시 user mode로 switch → user application에 값 return
 
@@ -122,13 +122,14 @@ int f1() {
 ```
 
 - regular function의 경우
-    - 실행 위치만 옮겨서 해당 function을 수행
+  - 실행 위치만 옮겨서 해당 function을 수행
 - System call의 경우
-    - user mode → kernel mode로 switch한 후, 해당 요청 처리하고 다시 mode switch하고 return value
 
-    ⇒ mode switching이 시간을 소모
+  - user mode → kernel mode로 switch한 후, 해당 요청 처리하고 다시 mode switch하고 return value
 
-![Chap%202%20Operating%20System%20Structure%2017c2e0e9b21044b08a0d556023b70afe/Untitled%204.png](Chap%202%20Operating%20System%20Structure%2017c2e0e9b21044b08a0d556023b70afe/Untitled%204.png)
+  ⇒ mode switching이 시간을 소모
+
+![Untitled 4](https://user-images.githubusercontent.com/33208303/115228704-10b84e80-a14d-11eb-9ea7-5451b992a99f.png)
 
 - eax ← system call #
 - ebx ← fd
@@ -202,56 +203,57 @@ int f1() {
 ### Guideline: Mechanism and Policy
 
 - 메커니즘과 정책을 분리
-    - 메커니즘 : 어떤 일을 어떻게 할 것인가를 결정하는 일
-    - 정책 : 무엇을 할 것인가를 결정하는 일
-    - 분리하는 이유
-        - 정책은 장소가 바뀌거나 시간의 흐름에 따라 변경될 수 있는데, 정책의 변경이 메커니즘의 변경을 요구하는 경우 그렇지 않은 경우보다 바람직하지 못함
+  - 메커니즘 : 어떤 일을 어떻게 할 것인가를 결정하는 일
+  - 정책 : 무엇을 할 것인가를 결정하는 일
+  - 분리하는 이유
+    - 정책은 장소가 바뀌거나 시간의 흐름에 따라 변경될 수 있는데, 정책의 변경이 메커니즘의 변경을 요구하는 경우 그렇지 않은 경우보다 바람직하지 못함
 
 # OS Implementation
 
 - assembly 언어로 구현 → 오류 발생 ↑, 어려움, port 어려움
 - 고수준의 언어로 구현 (C, ...)
-    - 장점
-        - 구현 시간이 빠르다
-        - 간결하고 이해와 디버깅이 쉽다
-        - 컴파일러의 발전이 코드 생성을 향상시킬 것
-    - 단점
-        - 성능: 항상 차선의 코드 생성
-        - 고수준의 언어로 쓰인 small critical code가 나중에는 다른 최적의 코드로 대체
+  - 장점
+    - 구현 시간이 빠르다
+    - 간결하고 이해와 디버깅이 쉽다
+    - 컴파일러의 발전이 코드 생성을 향상시킬 것
+  - 단점
+    - 성능: 항상 차선의 코드 생성
+    - 고수준의 언어로 쓰인 small critical code가 나중에는 다른 최적의 코드로 대체
 
 # Operating System Structure
 
 ### Monolithic structure vs. componentized, modularied approach
 
 - monolithic structure
-    - 간단한 동작
-    - 하나의 큰 조각, 서로 의존 ⇒ 하나를 변경하거나 대체하기 어려운 문제
 
-    ⇒ 확장성이 좋지 않다
+  - 간단한 동작
+  - 하나의 큰 조각, 서로 의존 ⇒ 하나를 변경하거나 대체하기 어려운 문제
 
-    ![Chap%202%20Operating%20System%20Structure%2017c2e0e9b21044b08a0d556023b70afe/Untitled%205.png](Chap%202%20Operating%20System%20Structure%2017c2e0e9b21044b08a0d556023b70afe/Untitled%205.png)
+  ⇒ 확장성이 좋지 않다
 
-    - kernel에 여러 기능들이 합쳐져서 존재 (tightly coupled)
+  ![Untitled 5](https://user-images.githubusercontent.com/33208303/115228706-1150e500-a14d-11eb-811d-3a9a0be7018d.png)
+
+  - kernel에 여러 기능들이 합쳐져서 존재 (tightly coupled)
 
 # OS Structure: Layered Approach
 
 ### Layered approach
 
-![Chap%202%20Operating%20System%20Structure%2017c2e0e9b21044b08a0d556023b70afe/Untitled%206.png](Chap%202%20Operating%20System%20Structure%2017c2e0e9b21044b08a0d556023b70afe/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/33208303/115228708-11e97b80-a14d-11eb-8c49-9ec9b6778302.png)
 
 - Layer 0: HW, Layer M: user interface
 - 각 Layer는 오직 상위 또는 하위 1개의 계층과만 소통 가능
 - Layer M은 Layer M-1의 operation을 유발 (request)
 - Layer M-1은 Layer M에게 요청받은 서비스 제공 (response)
 - 장점
-    - 간단한 구조 ⇒ 디버그의 용이
-    - 층이 분리되어 있으므로 Layer가 대체되어도 interface는 변경 X
-        - Layer 1 → Layer 1`로 변경, Layer 2가 Layer 1에 요구한 요청에 대한 reponse가 틀린 경우, Layer 1만 Debug하면 완료
+  - 간단한 구조 ⇒ 디버그의 용이
+  - 층이 분리되어 있으므로 Layer가 대체되어도 interface는 변경 X
+    - Layer 1 → Layer 1`로 변경, Layer 2가 Layer 1에 요구한 요청에 대한 reponse가 틀린 경우, Layer 1만 Debug하면 완료
 - 단점
-    - Layer를 정의하는 것 자체가 어려움 (functionality 사이의 충돌)
-    - Layer를 오가는 것이 많은 overhead를 발생시킴
-        - function call로 인한 계층 이동 → mode change가 포함될 수 있음
-    - Layer 수의 증가 ⇒ 실행 시간의 증가
+  - Layer를 정의하는 것 자체가 어려움 (functionality 사이의 충돌)
+  - Layer를 오가는 것이 많은 overhead를 발생시킴
+    - function call로 인한 계층 이동 → mode change가 포함될 수 있음
+  - Layer 수의 증가 ⇒ 실행 시간의 증가
 
 # Microkernels → 그저 approach 중 하나
 
@@ -269,8 +271,9 @@ int f1() {
 ### 단점
 
 - 성능 저하
-    - message passing 방식으로 인한 overhead가 발생
 
-    ![Chap%202%20Operating%20System%20Structure%2017c2e0e9b21044b08a0d556023b70afe/Untitled%207.png](Chap%202%20Operating%20System%20Structure%2017c2e0e9b21044b08a0d556023b70afe/Untitled%207.png)
+  - message passing 방식으로 인한 overhead가 발생
 
-    - App의 Request를 받아서 user model에 있는 function으로 redirect, 이때 msg 전달
+  ![Untitled 7](https://user-images.githubusercontent.com/33208303/115228709-12821200-a14d-11eb-8ccc-c4a3127a78e2.png)
+
+  - App의 Request를 받아서 user model에 있는 function으로 redirect, 이때 msg 전달
