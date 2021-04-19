@@ -1,4 +1,4 @@
-# Chap 4 Threads
+# Chap 4 `Threads`
 
 # Thread
 
