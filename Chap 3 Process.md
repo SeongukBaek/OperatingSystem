@@ -105,7 +105,7 @@
 
 ![Untitled 7](https://user-images.githubusercontent.com/33208303/115229210-b5d32700-a14d-11eb-9d10-4b7cbed1621f.png)
 
-- syscall handling 후 return, 마지막에 어느 프로세스로 return할 지 결정하는 것 → schduling
+- syscall handling 후 어느 프로세스로 return할 지 결정하는 것 → schduling
 
 # Process Scheduling
 
