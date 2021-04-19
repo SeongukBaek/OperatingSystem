@@ -84,7 +84,7 @@
   - one option
     - 프로세스가 kernel mode에 있을때, release되지 않도록 함
     - 하지만 real-time computing의 경우,
-      빨리 처리해야 하는 프로세스가 system call 사용한다면 preemption 불가
+      빨리 처리해야 하는 프로세스가 system call 사용 중인 다른 프로세스 (-> preemption 불가)에 의해 빠르게 처리되지 못함
       ⇒ 문제 발생
 
 # Dispatcher
