@@ -94,7 +94,7 @@
 - Why use APIs rather than System Calls directly?
   - 인자나 buffering 문제 해결이 어렵기 때문에 직접적으로 호출하지 않음
   - Portablity문제(code를 다른 환경(system call setup이 다른 = different mapping)에서 compile가능 = portable)
-  - libc system call을 사용하기 위해 필요한 인자를 채워주는 역할
+  - libc는 system call을 사용하기 위해 필요한 인자를 채워주는 역할
 
 # System Call Interface
 
