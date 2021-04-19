@@ -25,8 +25,7 @@
 
 # Computer System의 관점
 
-<img src='C:\Users\samsung\Desktop\학과자료\3학년 1학기\운영체제\OS_git\Chap 1 Introduction\Untitled.png'>
-<!-- ![Untitled.png](./Chap 1 Introduction/Untitled.png) -->
+![Untitled.png](./Users/samsung/Desktop/학과자료/3학년 1학기/운영체제/OS_git/Chap 1 Introduction/Untitled.png)
 
 - HW, OS, App, Users
 - app이 직접적으로 HW에 접근하지 못하고, OS에 request, OS가 HW에 접근하여 해당 요청 처리 후 return
