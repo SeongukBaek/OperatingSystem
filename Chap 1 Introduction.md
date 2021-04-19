@@ -1,6 +1,6 @@
 # Chap 1 Introduction
 
-# 다양성은 적
+# Complexity is Our Enemy
 
 ### HW의 다양성
 
