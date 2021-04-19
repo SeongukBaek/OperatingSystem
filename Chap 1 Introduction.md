@@ -25,7 +25,7 @@
 
 # Computer System의 관점
 
-![Chap%201%20Introduction%2022743c38890a446abd4dfe702a9f2f7e/Untitled.png](Chap%201%20Introduction%2022743c38890a446abd4dfe702a9f2f7e/Untitled.png)
+![Untitled.png](./Chap 1 Introduction/Untitled.png)
 
 - HW, OS, App, Users
 - app이 직접적으로 HW에 접근하지 못하고, OS에 request, OS가 HW에 접근하여 해당 요청 처리 후 return
@@ -35,27 +35,29 @@
 ### User Views → 어떤 종류의 사용자인가에 따라
 
 - Home PC user → Personal Thing 요구
-    - 사용하는데 있어 easy
-    - Resource utilization이 문제되지 X
+  - 사용하는데 있어 easy
+  - Resource utilization이 문제되지 X
 - Mainframe, mini computer, workstation
-    - 많은 프로그램 수행 목적
-    - 1개의 program이 다른 program에 영향을 주면 X
-    - Resource manage가 필요, easy of use 신경 X
+  - 많은 프로그램 수행 목적
+  - 1개의 program이 다른 program에 영향을 주면 X
+  - Resource manage가 필요, easy of use 신경 X
 - Mobile devices
-    - 수행에 있어 빠르고 쉬워야 함
-    - usability, user interface 고려
+  - 수행에 있어 빠르고 쉬워야 함
+  - usability, user interface 고려
 
 ### System Views
 
 - Resource allocator
-    - Resource: 컴퓨터가 사용하는 모든 자원
 
-        ⇒ 자원 충돌 문제의 해결이 필요
+  - Resource: 컴퓨터가 사용하는 모든 자원
+
+    ⇒ 자원 충돌 문제의 해결이 필요
 
 - Control Program
-    - error와 computer의 부적절한 사용 방지
 
-        ⇒ not safe → reject / safe → run
+  - error와 computer의 부적절한 사용 방지
+
+    ⇒ not safe → reject / safe → run
 
 # OS의 정의 → 명확한 정의 X
 
@@ -73,7 +75,7 @@
 ### 한 PC에서 여러 User가 Program 실행 시
 
 - OS가 실행 순서, Resource 관리 등을 수행
-    - ex. isolation을 통한 다른 Program의 data에 영향 X
+  - ex. isolation을 통한 다른 Program의 data에 영향 X
 
 ### Programmer가 Program 구현 시
 
@@ -92,10 +94,10 @@
 ### Start-up
 
 - Bootstrap program(Helper) : Computer 전원 on → 제일 먼저 실행됨
-    - ROM or EEPROM에 저장되어있음 (firmware:  명령어들의 집합)
-    - CPU register와 device controllers, Memory를 초기화
-    - OS kernel을 load, 동작시킴
+  - ROM or EEPROM에 저장되어있음 (firmware: 명령어들의 집합)
+  - CPU register와 device controllers, Memory를 초기화
+  - OS kernel을 load, 동작시킴
 - System daemons
-    - kernel이 돌아가는 entire time동안 계속 동작하는 프로그램
-    - init은 첫번째로 동작하는 Process, 이는 많은 daemons를 실행시킴
-    - init 또한 일종의 daemon이지만, init의 종료는 곧 OS의 종료를 의미
+  - kernel이 돌아가는 entire time동안 계속 동작하는 프로그램
+  - init은 첫번째로 동작하는 Process, 이는 많은 daemons를 실행시킴
+  - init 또한 일종의 daemon이지만, init의 종료는 곧 OS의 종료를 의미
