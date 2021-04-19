@@ -20,6 +20,7 @@
 ![Untitled](https://user-images.githubusercontent.com/33208303/115229194-b370cd00-a14d-11eb-849a-d4b6455c5167.png)
 
 - 32bit라고 가정했을 경우, 각 프로세스에는 위와 같은 형태의 **가상** 메모리가 4GB 할당된 것으로 생각
+  - 4GB인 이유는 32bit architecture에서 인식할 수 있는 최대 메모리 크기가 4GB임  
   - 이때, Reserved by Kernel은 1GB를 가짐
 - Stack area (segment)
   - grows downward as functions are called
