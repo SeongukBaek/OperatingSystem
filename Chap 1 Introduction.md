@@ -25,7 +25,7 @@
 
 # Computer System의 관점
 
-![Untitled](./Users/samsung/Desktop/학과자료/3학년 1학기/운영체제/OS_git/Chap 1 Introduction/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/33208303/115228172-6809ef00-a14c-11eb-99bc-1980c4e05d1f.png)
 
 - HW, OS, App, Users
 - app이 직접적으로 HW에 접근하지 못하고, OS에 request, OS가 HW에 접근하여 해당 요청 처리 후 return
@@ -65,7 +65,7 @@
 
 ## Computer System Organization
 
-![Chap%201%20Introduction%2022743c38890a446abd4dfe702a9f2f7e/Untitled%201.png](Chap%201%20Introduction%2022743c38890a446abd4dfe702a9f2f7e/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/33208303/115228284-866fea80-a14c-11eb-90fe-6fba7cd35064.png)
 
 - system bus: communication channel, 모든 요소들이 이를 이용하여 소통
 - CPU와 device controller는 병렬적으로 동작을 수행
