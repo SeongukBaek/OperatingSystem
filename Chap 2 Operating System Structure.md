@@ -1,4 +1,4 @@
-# Chap 2 Operating System Structure
+# `Chap 2 Operating System Structure`
 
 # OS Services → for users, for efficient operation
 
