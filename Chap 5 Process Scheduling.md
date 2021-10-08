@@ -19,7 +19,7 @@
     - CPU burst → I/O burst → CPU burst → I/O burst → 반복
     - burst : duration, Some time span
 
-![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled.png](Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled.png)
+![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled.png](https://user-images.githubusercontent.com/33208303/115229648-40b42180-a14e-11eb-9ce9-a224db44976b.png)
 
 ### I/O : Input/Output → CPU 밖으로 나가는 모든 task
 
@@ -27,13 +27,13 @@
 
 # CPU Burst duration
 
-![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%201.png](Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%201.png)
+![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%201.png](https://user-images.githubusercontent.com/33208303/115229629-3db93100-a14e-11eb-9e07-4fec7fc18a07.png)
 
 - Program마다 다른 그래프
 - Large number of short CPU bursts (초반부)
 - Small number of long CPU bursts (후반부)
 
-![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%202.png](Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%202.png)
+![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%202.png](https://user-images.githubusercontent.com/33208303/115229635-3eea5e00-a14e-11eb-9aec-0e26df32cfe0.png)
 
 # CPU Scheduler → When to do Scheduling
 
@@ -99,7 +99,7 @@
 - Dispatch latency ( ⇒ management overhead이므로 최대한 짧게)
     - stop one process & start another process 하는데 드는 time
     
-    ![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%203.png](Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%203.png)
+    ![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%203.png](https://user-images.githubusercontent.com/33208303/115229639-3f82f480-a14e-11eb-8edd-681c8fdf6a76.png)
     
     - 위 그림에서 Dispatch latency는 P1의 kernel mode에서 드는 시간
     - Restore state from PCB2하고 나서 PC에 실행할 명령어를 저장하게 된다
@@ -171,7 +171,7 @@ variance를 최소화하는 것이 good
     - 프로세스의 head가 CPU에 할당됨
 - Downside : average waiting time 증가
 
-![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%204.png](Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%204.png)
+![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%204.png](https://user-images.githubusercontent.com/33208303/115229642-3f82f480-a14e-11eb-80bf-b6f6c036354a.png)
 
 - P1으로 인해 P2와 P3의 waiting time이 증가하는 문제
 
@@ -179,14 +179,14 @@ variance를 최소화하는 것이 good
 
 - P2, P3, P1의 순서로 왔을 경우
 
-![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%205.png](Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%205.png)
+![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%205.png](https://user-images.githubusercontent.com/33208303/115229643-401b8b00-a14e-11eb-8943-05011c060606.png)
 
 - Average Waiting Time : (0 + 3 + 6)/3 = 3ms     ⇒     매우 감소
 - FCFS에서는, average waiting time을 향상시킬 기회 존재
 - **Convoy effect**가 발생할 수 있음
     - : 하나의 오래 걸리는 프로세스로 인해 전체적인 처리 시간이 매우 증가
     
-    ![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%206.png](Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%206.png)
+    ![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%206.png](https://user-images.githubusercontent.com/33208303/115229645-401b8b00-a14e-11eb-8c7d-1935bd885118.png)
     
     - P5는 한참 걸리고, P1~P4는 금방 finish
     - Grouping effect
@@ -197,7 +197,7 @@ variance를 최소화하는 것이 good
 
 - shortest-burst time job을 먼저 처리
 
-![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%207.png](Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%207.png)
+![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%207.png](https://user-images.githubusercontent.com/33208303/115229646-40b42180-a14e-11eb-9ff4-4c0225dda9a2.png)
 
 - Average Waiting Time : (3 + 16 + 9 + 0)/4 = 7
 - AWT for FCFS : (0 + 6 + 14 +21)/4 = 10
@@ -210,7 +210,7 @@ variance를 최소화하는 것이 good
 
 # SJF: Approximating CPU burst length
 
-![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%208.png](Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%208.png)
+![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%208.png](https://user-images.githubusercontent.com/33208303/136524895-8c9ab5b3-7de1-4abf-b51d-02c8dfcd902c.png)
 
 ### CPU burst의 length를 알기 어렵기에 approximate
 
@@ -238,7 +238,7 @@ variance를 최소화하는 것이 good
 
 ### Preemptive하다면, current process보다 shorter하면, current process는 descheduled 될 것
 
-![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%209.png](Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%209.png)
+![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%209.png](https://user-images.githubusercontent.com/33208303/136524913-ef443826-d3f9-48a5-b460-e0bb642b5c24.png)
 
 ---
 
@@ -299,13 +299,13 @@ variance를 최소화하는 것이 good
 
 ### Example
 
-![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%2010.png](Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%2010.png)
+![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%2010.png](https://user-images.githubusercontent.com/33208303/136524915-d085f6e4-30f6-49c5-bf07-aa119a2b8159.png)
 
 - Average waiting time: (6 + 4 + 7)/3 = 5.66
 
 ### Effect of time quantum to the performance
 
-![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%2011.png](Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%2011.png)
+![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%2011.png](https://user-images.githubusercontent.com/33208303/136524918-12cfd963-e56d-4d89-8923-131ef1f1e564.png)
 
 - time quantum ↓, context switching ↑, more responsive (interactive)
 
@@ -313,7 +313,7 @@ variance를 최소화하는 것이 good
 
 # Multilevel Queue Scheduling
 
-![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%2012.png](Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%2012.png)
+![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%2012.png](https://user-images.githubusercontent.com/33208303/136524919-0d72e381-106d-4df6-acb0-5a196a547bd7.png)
 
 ### Process들은 영구적으로 하나의 Queue에 할당됨
 
@@ -325,7 +325,7 @@ variance를 최소화하는 것이 good
 
 # Multilevel Feedback Queue Scheduling (MQS의 문제 해결)
 
-![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%2013.png](Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%2013.png)
+![Chap%205%20Process%20Scheduling%20b9f9c800f94d446c840d2075aa7ae333/Untitled%2013.png](https://user-images.githubusercontent.com/33208303/136524923-4ca9b3d4-c325-4841-b6c3-da85fe6dec1d.png)
 
 ### Aging으로 Starvation 해결
 
