@@ -1,24 +1,8 @@
-# `Chap 1 Introduction`
-
-# Complexity is Our Enemy
-
-### HW의 다양성
-
-- CPU: ISA(Instruction Set Architecture), Cache Size(L1, L2, L3), clock speed(GHz)
-- Memory, I/O devices, Network, Interfaces
-
-⇒ **HW, SW가 너무 많아지면서 Control의 어려움이 발생**
-
 # OS란 무엇인가?
-
-### HW를 관리하는 일종의 SW(Program)
-
-### Computer의 User와 HW 사이에서 동작하는 Program
-
+: HW를 관리하는 일종의 SW(Program), Computer의 User와 HW 사이에서 동작하는 Program
 - user ↔ OS ↔ HW
 
 ### OS의 목표
-
 - user program을 실행하고, user problem을 쉽게 해결해줌
 - 컴퓨터 시스템을 더 편리하게 해줌 → user interface와 관련
 - Computer HW를 낭비 없이 사용하기 위함 → resources에 대한 관리
@@ -28,14 +12,15 @@
 ![Untitled](https://user-images.githubusercontent.com/33208303/115228172-6809ef00-a14c-11eb-99bc-1980c4e05d1f.png)
 
 - HW, OS, App, Users
-- app이 직접적으로 HW에 접근하지 못하고, OS에 request, OS가 HW에 접근하여 해당 요청 처리 후 return
+- Application이 직접적으로 HW에 접근하지 못하고, OS에 요청한다.
+- 해당 요청을 받은 OS가 HW에 접근하여 요청 처리 후 return
 
 # OS의 View Points
 
-### User Views → 어떤 종류의 사용자인가에 따라
-
+### User Views 
+: 어떤 종류의 사용자인가에 따라 나뉘게 된다.
 - Home PC user → Personal Thing 요구
-  - 사용하는데 있어 easy
+  - 용이성을 추구
   - Resource utilization이 문제되지 X
 - Mainframe, mini computer, workstation
   - 많은 프로그램 수행 목적
@@ -46,21 +31,15 @@
   - usability, user interface 고려
 
 ### System Views
-
 - Resource allocator
-
   - Resource: 컴퓨터가 사용하는 모든 자원
-
     ⇒ 자원 충돌 문제의 해결이 필요
-
 - Control Program
-
   - error와 computer의 부적절한 사용 방지
-
     ⇒ not safe → reject / safe → run
 
-# OS의 정의 → 명확한 정의 X
-
+# OS의 정의 
+→ 명확한 정의 X
 - 다양한 HW와 목적이 존재 (kernel + system programs)
 
 ## Computer System Organization
